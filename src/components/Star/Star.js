@@ -16,6 +16,10 @@ class Star extends Component {
     })
   }
 
+  handleGetMoreInfo = () => {
+    this.props.handleGetMoreInfo(this.props.starData)
+  }
+
 render() {
   let listItem;
   // how to show and hide things
@@ -36,6 +40,7 @@ render() {
     <div>
       {listItem}
       <button onClick={this.handleClick}>Show/Hide</button>
+      <button onClick={this.handleGetMoreInfo}>Click for More Info!</button>
     </div>
   );
 }

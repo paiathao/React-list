@@ -6,7 +6,7 @@ class Planet extends Component {
   render() {
     return (
       <li>
-        {this.props.planetData.name}
+        The Planet {this.props.planetData.name} have a population of: {this.props.planetData.population}.
       </li>
     );
   }

@@ -56,6 +56,10 @@ class App extends Component {
     
   }
 
+  handleGetMoreInfo = (star) => {
+    console.log('on click', star)
+  }
+
   handleFormSubmit = (event) => {
     event.preventDefault();
     console.log(this.state);
@@ -117,7 +121,7 @@ class App extends Component {
         handleChangeForInput={this.handleChangeFor}
         handleSubmit={this.handleFormSubmit}
         />
-      <StarList listOfStars={this.state.starList}/>
+      <StarList listOfStars={this.state.starList} handleGetMoreInfo={this.handleGetMoreInfo}/>
       <PlanetList listOfPlanets = {this.state.planetList}/>
       <Footer/>
       </div>
